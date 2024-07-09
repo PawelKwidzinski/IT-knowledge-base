@@ -2,5 +2,5 @@
 - [[Spring Boot]]
 - [[GitHub]]
 - [[NoSql]]
-- [[Prompty AI]]
+- [[AI]]
 - [[CV - notatki]]
