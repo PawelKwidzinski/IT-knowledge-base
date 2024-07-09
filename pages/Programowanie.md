@@ -1,4 +1,5 @@
 - [[Java]]
+- [[Spring Boot]]
 - [[GitHub]]
 - [[NoSql]]
 - [[Prompty AI]]

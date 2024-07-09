@@ -1,4 +1,5 @@
 ### Pytania rekrutacyjne
+collapsed:: true
 	- **Jakim językiem programowania jest JAVA (OOP, ale elementy funkcyjnego przy streamach)?**
 	  collapsed:: true
 		- JAVA jest współbieżnym, opartym na klasach, obiektowym językiem ogólnego zastosowania. Java jest językiem tworzenia programów źródłowych kompilowanych do kodu bajtowego wykonywanego przez wirtualną maszynę (JVM), która interpretuje/kompiluje na kod maszynowy.
@@ -9,9 +10,8 @@
 		- Obiektowość
 		- Niezawodność i bezpieczeństwo
 		- Wydajność, wykorzystywanie procesorów wielordzeniowych
-	- collapsed:: true
-	  
-	  **Co to jest JDK, JRE, JVM?**
+	- **Co to jest JDK, JRE, JVM?**
+	  collapsed:: true
 		- **JDK (Java Development Kit)** - zawiera narzędzia dla programistów pozwalające na tworzenie aplikacji na platformę JVM. Jeżeli chcemy implementować lub chociażby kompilować programy napisane w Javie to potrzebujemy JDK.
 		  **JRE (Java Runtime Environment)** - zawiera wyłącznie narzędzia niezbędne do uruchomienia aplikacji, tzw. Środowisko uruchomieniowe. Jeżeli chcemy tylko uruchamiać programy napisane w Javie to JRE nam wystarczy.
 		  **JVM (Java Virtual Machine)** - wirtualny “komputer” opisany przez specyfikację (publicznie dostępną), która pozwala różnym producentom oprogramowania na tworzenie własnych maszyn wirtualnych pracujących pod kontrolą różnych środowisk i urządzeń. W Javie JVM sprawia, że kod źródłowy .java jest kompilowany do kodu bytowego .class, który jest uruchamiany przez JVM, która interpretuje/kompiluje na kod maszynowy.
@@ -60,9 +60,8 @@
 		- double -  rozmiar w pamięci: 8 bajty, zakres: max około 15 liczb po przecinku, liczby rzeczywiste
 		- char -  rozmiar w pamięci: 2 bajty, zakres: od 0 do 65556, liczbowe kody dla znaków Unicode
 		- boolean - rozmiar w pamięci: 1 bajty, zakres: true, false, wartości logiczne
-	- collapsed:: true
-	  
-	  **Jaka jest różnica pomiędzy klasami String, StringBuffer oraz StringBuilder?**
+	- **Jaka jest różnica pomiędzy klasami String, StringBuffer oraz StringBuilder?**
+	  collapsed:: true
 		- String jest niezmienny (immutable), w przeciwieństwie do StringBuffer i StringBuilder
 		- StringBuffer jest thread safe i sychronized (tzn. Bezpiecznie wykorzystamy go w aplikacji wielowątkowej)
 		- StringBuilder nie jest Thread Safe, w związku z tym jest szybszy niż StringBuffer
@@ -188,3 +187,109 @@
 		  hashCode()
 		  
 		  Źródło: [http://karolwojcik.net/java-class-design-67-nadpisywanie-metod-klasy-object/](http://karolwojcik.net/java-class-design-67-nadpisywanie-metod-klasy-object/)
+	- collapsed:: true
+	  
+	  **Czym sie rozni "==" od equals?**
+		- Do sprawdzenia “równości” typów prostych służą operatory == oraz !=. Dzięki nim możemy porównać ze sobą każdą zmienną typu prostego. Wynikiem takiego porównania jest wartość typu boolean – true jeśli porównywane obiekty są równe i false w przeciwnym wypadku.
+		- Używając operatora == do porównywania obiektów uzyskamy błędne rezultaty. Do porównania tego typu powinniśmy używać metody equals.
+	- collapsed:: true
+	  
+	  **Czym są kolekcje, jakie znamy rodzaje kolekcji i opisać je?**
+		- Źródła:
+		  [https://1024kb.pl/programowanie/java/kolekcje-w-javie/](https://1024kb.pl/programowanie/java/kolekcje-w-javie/)
+		  https://www.samouczekprogramisty.pl/kolekcje-w-jezyku-java/
+		- Kolekcje to nic innego jak struktury danych, które umożliwiają nam przechowywanie danych (dowolnych obiektów np. Lista osób) i  udostępniają nam przeróżne metody np.:
+			- Dodawanie do kolekcji
+			- Usuwanie z  kolekcji
+			- Wyszukiwanie w kolekcji
+			- Czyszczenie kolekcji
+		- Złożoność obliczeniowa tych operacji różni się od implementacji danej struktury danych.
+		  Kolekcje w Javie:
+			- Lista
+			- Set
+			- Mapa
+			- Stos
+			- Kolejka
+			- Tablica
+			  ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXf_CtHo_oHryoYt03wUY6Hpe_eThlg5YmIocl8O_coyQEqYAGy8jfCiyZUWNcwzwu5R3dpUjipsClLtkjAyshOTtVVoFseZm5fKbb68vOI9hNNbo01QfqxpfoW50HJbO8_7KHgSP420z-bN-iGgVDZbYbI?key=Msf39maXTm1CONfRDIC-xA){:height 272, :width 613}
+		- **Iterbale** - jest bardzo prosty interfejs, który zawiera w sobie tylko iterator. Dzięki temu, że Collection implementuje ten interfejs mamy możliwość użycia pętli forEach na używanych przez nas kolekcjach.
+		  id:: 668bb504-482c-43e5-9fb1-7c8d7a8dcfd4
+		- **Collection** - jest interfejsem, który implementowany przez wszystkie kolekcje oprócz mapy. Zapewnia nam to, że każda implementacja interfejsu Collection umożliwia nam takie operacje jak:
+			- Dodawanie elementów
+			- Usuwanie elementów
+			- Sprawdzanie czy jest pusta kolekcja
+			- Czy kolekcja zawiera element
+			- Usuwanie elementów, które nie są przekazane w kolekcji jako argument
+			- Konwersja do tablicy
+		- **<E>** - Przy każdym interfejsie w hierarchii drzewa występuje znak typu generycznego <E>. Dzięki temu w javie zachodzi polimorfizm parametryczny, oznacza to, że klasy mogą być bardziej elastyczne.
+		  Typy generyczne w kolekcjach są bardzo ważne, dzięki nim w każdej kolekcji możemy przechowywać obiekty dowolnego typu.Nieważne czy będą to obiekty typu: User, Integer, Boolean, File - wszystkie obiekty możemy przechowywać w kolekcjach.
+		- **List** - jest to interfejs i  podobnie jak tablica grupuje elementy. Jej główną przewagą nad tablicą jest to, że programista nie musi przejmować się rozmiarem listy, jest ona automatycznie powiększana wraz z dodawaniem nowych elementów. Dodatkowo lista posiada metodę, która umożliwia nam wstawienie elementu pod konkretny index i sama załatwia kwestię przesuwania elementów. Najbardziej popularnymi implementacjami list są ***ArrayList*** i ***LinkedList***
+		- Przydatne metody w **java.util.List** zakładając, że nasza zmienna jest typu List<String>
+			- add - dodaje element do listy
+			- addAll - jako parametr przyjmuje inną kolekcję i dodaje wszystkie elementy z kolekcji do listy
+				- contains - jako parametr przyjmuje element listy i zwraca flagę informującą czy dany element już istnieje
+			- isEmpty - bezargumentowa metoda zwracająca flagę informującą czy lista jest pusta,
+			- size - bezargumentowa metoda zwracająca ilość elementów w liście
+			- indexOf - metoda jako parametr przyjmuje element listy i zwraca indeks pierwszego wystąpienia,
+			- lastIndexOf - metoda jako parametr przyjmuje element listy i zwraca indeks ostatniego wystąpienia
+		- **Set** - zbiór (ang. set) to kolekcja, która służy do przechowywania unikalnych elementów. W przypadku zbioru nie jest istotna kolejność dodawanych elementów. Innymi słowy jeśli do zbioru dodamy na początku na początku element X, a później Y to przechodząc po kolei po elementach zbioru możemy dostać je w odwrotnej kolejności. Istnieją także implementacje zbioru w których kolejność jest zachowana.
+		  Kolejną cechą zbioru jest to, że przechowuje on unikalne elementy. W odróżnieniu od listy, w zbiorze można przechowywać wyłącznie jedną instancję obiektu. Do sprawdzenie czy dana instancja jest już w zbiorze służę nam poprawnie zaimplementowane metody equals() i hashCode().
+		- Przydatne metody w **java.util.Set**
+			- Add - dodaje element do zbioru,
+			- addAll - jako parametr przyjmuje inną kolekcję i  dodaje wszystkie elementy z tej kolekcji do zbioru (pomijając duplikaty),
+			- Contains - jako parametr przyjmuje element zbioru i zwraca flagę informującą czy dany element już istnieje,
+			- isEmpty - bezargumentowa metoda zwracająca flagę informująca czy zbior jest pusty,
+			- Size metoda zwraca ilość elementów w zbiorze
+		- Najbardziej popularnymi implementacjami zbioru **Set** jest **HashSet** oraz **TreeSet**.
+			- **HashSet** - podstawowa implementacja, zapewnia unikalność elementów, ale nie mamy żadnej gwarancji co do ich kolejności. Wewnętrznie wykorzystywana jest tablica mieszająca, co wymaga poprawnej implementacji metod **hashCode()** oraz **equals()**.
+			  
+			  HashSet jest zbudowany na HashMap dzięki czemu operacje takie jak: add, remove, contains mają złożoność obliczeniową O(1). Dodatkowo HashSet umożliwia dodanie wartości **null **do zbioru.
+			- **TreeSet** - w porównaniu z HashSet, TreeSet przechowuje elementy posortowane w naturalnym porządku. Elementy są sortowane na podstawie Comparatora, który możemy zdefiniować na co najmniej dwa sposoby. W obiekcie który mam być posortowany musimy zaimplementować interfejs Comparable<T>. Możemy stworzyć klasę implementująca interfejs Comparator<T> i przekazać taki obiekt w konstruktorze Set.
+			  
+			  Z jakiej metody byśmy nie skorzystali to jesteśmy zmuszeni do zdefiniowania metody compare lub compareTo. Metoda compare przyjmuje dwa obiekty, które będzie porównywać, zaś compareTo tylko jeden ze względu, że operuje na polach w danym obiekcie. Jednak te obie metody mają cechę wspólną, zwracają one bowiem:
+				- 0, gdy obiekty są równe
+				- 1, gdy obiekt jest większy
+				- -1, gdy obiekt jest mniejszy
+		- **Map** - mapa jest kolekcją, która pozwala przechowywać odwzorowanie zbioru kluczy na listę wartości. Innymi słowy w mapie możemy trzymać klucze, którym odpowiadają wartości. Klucze muszą być unikalne, wartości natomiast mogą się powtarzać. Czyli pod kluczem A i pod kluczem B może być ta sama wartość X.
+		  Kluczami w mapie powinnym być obiekty, których nie można zmodyfikować (immutable). Np dobrymi kandydatami na klucze są instancje takich klas jak String lub Integer. Ponadto klasy kluczy muszą poprawnie implementować metody hashCode/equals. Jeśli jakaś para (klucz, wartość1) istnieje jest w mapie, a Ty spróbujesz dodać kolejną (klucz, wartość2) (ten sam klucz). Wówczas ta ostatnia para będzie przechowywana przez mapę, nadpisze ona poprzedni element.
+		  Podobnie jak Set i List, Map jest interfejsem generycznym, jednak w tym przypadku wymaga on dwóch klas - pierwsza z nich definiuje typ kluczy, druga typ wartości.
+		- Przydatne metody w **java.util.Map**
+			- put - dodaje parę klucz/wartość do mapy,
+			- putAll - jako parametr przyjmuje inną mapę i dodaje wszystkie elementy z do mapy,
+			- conatinsKey - jako parametr przyjmuje klucz i zwraca flagę informującą czy klucz już istnieje
+			- containsValue - jako parametr przyjmuje wartość i zwraca flagę informującą czy dana wartość istnieje
+			- isEmpty - bezargumentowa metoda zwracająca flagę informującą czy mapa jest pusta,
+			- size - bezargumentowa metoda zwracająca liczbę elementów w mapie
+			- remove - metoda jako parametr przyjmuje klucz i usuwa parę klucz/wartość z mapy,
+			- get - metoda jako parametr przyjmuje klucz i zwraca odpowiadającą mu wartość
+	- **ArrayList vs LinkedList**
+	  collapsed:: true
+		- **Złożoność obliczeniowa (wyjaśnienie)**
+		  (Ο(…) mówi o tempie wzrostu. Może opisywać zależność pomiędzy czasem wykonywania kodu, a wielkością danych. Przykładowo, stwierdzenie, że kod ma złożoność obliczeniową Ο(n) mówi, że **czas wykonywania tego kodu będzie proporcjonalny do wielkości danych, lub szybszy**.
+		  Nazwy sugerują, że w LinkedList wykorzystywane są powiązania między elementami, a w ArrayList pod spodem jest wykorzystywana tablica. Różnice występuje w szybkości wyszukiwania, usuwania i dodawania elementów.
+		  Źródło: https://typeofweb.com/zlozonosc-obliczeniowa-czasowa-pamieciowa-algorytmow/
+		- **Wyszukiwanie**
+			- Ze względu, że **ArrayList** korzysta z tablic to dostęp do danych jest natychmiastowy tzn. **0(1)**, ponieważ używa ona indeksów.
+			- W przypadku **LinkedList**, gdzie elementy są powiązane ze sobą (każdy zawiera informację tylko i poprzednim i następnym elemencie w liście), aby znaleźć element złożoność obliczeniowa jest równa **0(n)**. W przypadku, gdy element jest na początku listy wszystko będzie ok, ale jesli wyszukiwany element będzie na 10000 elementem w liście, to już nie dokońca jest ok.
+		- **Usuwanie**
+			- Usuwanie szybciej wykonuje **LinkedList**, wystarczy jej 0(1), aby usunąć dany element, ponieważ do usunięcia wystarczy zmienić dwa adresy. Czyli element poprzedni usuwanego elementu musi wskazywać na element następny elementu usuwanego.
+			- W przypadku usuwania elementu w **ArrayList** operacja się to może znacznie wydłużyć. Dzieje się tak, ponieważ jesteśmy zmuszeni do przesunięcia wszystkich kolejnych elementów po usuwanym elemencie o jeden index w dół. Wszystko szybko pójdzie, jeżeli usuwamy ostatni element z listy, ponieważ nie musimy nic przesuwać. Jednak najgorszym scenariuszem jest usuwanie pierwszego elementu, złożoność takiej operacji to aż O(n).
+			- (Ο(…) mówi o tempie wzrostu. Może opisywać zależność pomiędzy czasem wykonywania kodu, a wielkością danych. Przykładowo, stwierdzenie, że kod ma złożoność obliczeniową Ο(n) mówi, że **czas wykonywania tego kodu będzie proporcjonalny do wielkości danych, lub szybszy**.
+		- **Wstawianie**
+			- Wstawianie działa podobnie jak usuwanie, musimy bowiem wykonać podobne operacji w obu przypadkach. Gdy dodajemy element na końcu **ArrayList** wszystko jest ok, w końcu nie ma żadnych konfliktów. Natomiast jeśli jesteśmy zmuszeni do dodania elementu na początku listy, to pierwszy index listy jest zajęty, skoro musi być pusty musimy **przesunąć wszystkie elementy w „górę”**. I o to w ten sposób złożoność obliczeniowa to O(n) – czyli niezbyt dobrze.
+			- Wstawianie do LinkedListy jest tak samo szybkie jak usuwanie, w końcu musimy tylko **zmienić wskazywanie elementów pomiędzy nowym elementem** i tak otrzymujemy O(1).
+		- Wnioski są proste, powinniśmy wykorzystywać LinkedList do list, których **operacją dominującą będzie wstawianie oraz usuwanie elementów**. Wtedy nawet podczas miliona operacji wstawiania/usuwania aplikacja będzie miała możliwość działać szybciej.
+		- Jednak w przypadku, gdy mamy listę, którą **bardzo często przeszukujemy warto wybrać ArrayList**. Dzięki zastosowaniu tablic mamy dostęp do danych O(1) – czyli błyskawicznie.
+	- **Czym są testy jednostkowe?**
+	  collapsed:: true
+		- Testy jednostkowe polegają na napisaniu kodu źródłowego, który wykonuje inny kod (produkcyjny). Weryfikując poprawność jego działania. Jak sama nazwa wskazuje testujemy jednostki - czyli małe części - dokładnie mówiąc metody. Mówiąc ściślej - metody publiczne traktując je jak czarne skrzynki. Dajemy konkretne dane wejściowe i oczekujemy poprawnych danych wejściowych - żadnych innych. Jeśli test zapali się na czerwono (nie przejdzie) to są dwie możliwości: albo nasza metoda nie działa poprawnie, albo źle napisaliśmy test, dlatego aby uniknąć takiego problemu stosuje się metodykę **Test Driven Development** tzw. **TDD.**
+	- **Czym jest Stub i Mock?**
+	  collapsed:: true
+		- **Stub** to obiekt, który w testach służy do imitowania właściwej implementacji. Jego zadaniem jest wyłącznie zwrócenie zadanej wartości.
+		- **Mock** to obiekt, którego używa się zamiast rzeczywistej implementacji w trakcie testów jednostkowych. Pozwala on na określenie jakich interakcji spodziewamy się w trakcie testów. Następnie można sprawdzić czy spodziewane interakcje rzeczywiście wystąpiły.
+		- Źródło:
+		  [https://www.samouczekprogramisty.pl/testy-jednostkowe-z-uzyciem-mock-i-stub/](https://www.samouczekprogramisty.pl/testy-jednostkowe-z-uzyciem-mock-i-stub/)
+	- **Jaka jest różnica pomiędzy Mock i Stub?**
+	  collapsed:: true
+		- **Stub** to obiekt, który się podstawia w teście za właściwą implementację. Stub pozwala jedynie na określenie zachowania obiektu, który imituje.
+		- **Mock** to także obiekt, który podstawiamy w teście za właściwą implementację. W jego przypadku poza określeniem zachowania, mamy możliwość jego weryfikacji. Innymi słowy mock’i pozwalają sprawdzać czy dany obiekt został użyty, jakie metody były wywołane w trakcie testu, jakie parametry były użyte w trakcie tych wywołań.
