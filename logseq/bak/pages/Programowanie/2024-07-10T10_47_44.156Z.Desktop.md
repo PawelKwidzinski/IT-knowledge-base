@@ -1,0 +1,5 @@
+- [[Java]]
+- [[GitHub]]
+- [[NoSql]]
+- [[Prompty AI]]
+- [[CV - notatki]]

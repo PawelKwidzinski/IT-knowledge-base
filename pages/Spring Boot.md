@@ -1,6 +1,5 @@
 ### Pytania rekrutacyjne
 	- **1. Czym jest Spring?**
-	  collapsed:: true
 		- Spring to framework do tworzenia aplikacji w Javie,  oferujący m.in. kontener IoC, wstrzykiwanie zależności, programowanie  aspektowe i wiele modułów ułatwiających tworzenie aplikacji.
 		- Źródło:
 		  https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/overview.html
@@ -17,11 +16,31 @@
 	- **4. Co to jest Bean?**
 	  collapsed:: true
 		- Bean to obiekt zarządzany przez kontener IoC Springa
-	- Jaki scope może mieć bean w Springu?
-	- Jaki jest domyślny scope dla beanów springowych?
-	- Czy bean mający scope Singleton jest bezpieczny w środowisku wielowątkowym/jest thread-safe?
-	- Co to jest wstrzykiwanie zależności (dependency injection)?
-	- Jakie znasz sposoby wstrzykiwania zależności? Który jest preferowany?
+	- **5. Jaki scope może mieć bean w Springu?**
+	  collapsed:: true
+		- Spring oferuje różne zakresy (scopes) dla beanów, m.in.:
+			- **singleton** (domyślny) - jeżeli bean ma ustawiony zakres jako singleton, to tylko jeden obiekt tego beana będzie zarządzany przez kontener Springa. Oznacza to, że jeżeli kilka razy będziemy chcieli „pobrać” tego beana, to za każdym razem będziemy dostawać tę samą instancję Beana.
+			- **prototype** - za każdym razem, kiedy próbujemy pobrać Beana, dostajemy nową instancję tego beana (tzn. np. poprzez iniekcję do innego beana, lub pobranie bezpośrednio przy użyciu metody **.getBean()**.
+			- **request** - używane w aplikacjach webowych. Ustawia zakres beana na cykl życia pojedynczego żądania http. Oznacza to, że każde żądanie będzie posiadało swoją własną instancję beana.
+			- **session** - używane w aplikacjach webowych. Zakres beana równa się zakresowi sesji http.
+			- **global-session** - jak wyżej, z tym że odnosi się do globalnego zakresu sesji http.
+	- **6. Jaki jest domyślny scope dla beanów springowych?**
+	  collapsed:: true
+		- Domyślnym zakresem dla beanów w Spring jest singleton
+	- **7. Czy bean mający scope Singleton jest bezpieczny w środowisku wielowątkowym/jest thread-safe?**
+	  collapsed:: true
+		- Beany o zakresie singleton nie są domyślnie bezpieczne w środowisku wielowątkowym (thread-safe). Programista musi zadbać o ich bezpieczeństwo, jeśli bean przechowuje stan.
+	- **8. Co to jest wstrzykiwanie zależności (dependency injection)?**
+	  collapsed:: true
+		- Wstrzykiwanie zależności to wzorzec projektowy, który pozwala na  przekazywanie zależności (np. obiektów) do komponentów aplikacji zamiast tworzenia ich bezpośrednio w kodzie. Dzięki temu komponenty są bardziej elastyczne, łatwiejsze do testowania i utrzymania.
+	- **9. Jakie znasz sposoby wstrzykiwania zależności? Który jest preferowany?**
+	  collapsed:: true
+		- W Springu można wstrzykiwać zależności na trzy sposoby:
+			- Przez konstruktor (preferowany sposób)
+			- Przez setter
+			- Przez pole (field injection)
+			  
+			  Wstrzykiwanie przez konstruktor jest preferowane, ponieważ  zapewnia, że wszystkie zależności są dostępne w momencie tworzenia  obiektu i ułatwia testowanie.
 	- Jaka jest różnica między adnotacjami @Autowired oraz @Inject?
 	- Czy adnotacja @Autowired jest obowiązkowa w przypadku wstrzykiwania przez konstruktor?
 	- W jaki sposób możemy wstrzyknąć wartość jakiegoś property, np. spring.datasource.url?
