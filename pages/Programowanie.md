@@ -1,5 +1,6 @@
 - [[Java]]
 - [[Spring Boot]]
+- [[Angular]]
 - [[GitHub]]
 - [[NoSql]]
 - [[AI]]
