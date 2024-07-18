@@ -59,7 +59,6 @@
 			  ![image.png](../assets/image_1721294689527_0.png){:height 133, :width 425}
 			  ![image.png](../assets/image_1721294709584_0.png){:height 94, :width 448}
 - Dyrektywy w Angular
-  collapsed:: true
 	- **Dyrektywy strukturalne** – dodawanie / usuwanie elementów z DOM
 	  collapsed:: true
 		- Dyrektywa * **ngFor** -> pozwala iterować po kolekcji danych np. po tablicy i wyświetlić odpowiednie dane. Poniżej przykład.
@@ -88,3 +87,4 @@
 		  ![image.png](../assets/image_1721301265693_0.png){:height 48, :width 245}
 		  Właścwiość **useClass** ma wartość true, więc element **<p>** otrzyma dwie klasy – **class1** oraz **class2**.
 	- **Komponenty** - to także dyrektywa, ale posiada tzw. widok definiowany przez szablon HTML.
+	- Test
