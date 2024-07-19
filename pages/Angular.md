@@ -74,7 +74,6 @@
 		  ![image.png](../assets/image_1721300905310_0.png){:height 178, :width 445}
 		  W przeglądarce wyświetli się zawartość pierwszego **<p>**, ponieważ właściwość **switchCase** ma taką samą wartość, jak warunek przy * **ngSwitchCase**
 	- **Dyrektywy atrybutowe** - zmiana wyglądu elementów DOM.
-	  collapsed:: true
 		- Dyrektywa * **ngStyle** -> pozwala na dynamiczne ustawianie stylów CSS na elemencie w oparciu o wartości właściwości w komponencie.
 		  ![image.png](../assets/image_1721301100774_0.png){:height 94, :width 310}
 		  ![image.png](../assets/image_1721301113235_0.png){:height 97, :width 628}
@@ -87,4 +86,15 @@
 		  ![image.png](../assets/image_1721301265693_0.png){:height 48, :width 245}
 		  Właścwiość **useClass** ma wartość true, więc element **<p>** otrzyma dwie klasy – **class1** oraz **class2**.
 	- **Komponenty** - to także dyrektywa, ale posiada tzw. widok definiowany przez szablon HTML.
-	- Test
+	- **ng-container** - to specjalny element, który służy jako logiczny kontener do  grupowania elementów DOM bez dodawania dodatkowego węzła do drzewa DOM. Oto najważniejsze cechy i zastosowania ng-container:
+	  collapsed:: true
+		- Jest to element logiczny, który nie renderuje się w finalnym drzewie DOM - zamiast tego jest renderowany jako komentarz HTML.
+		- Służy głównie do grupowania elementów bez konieczności dodawania dodatkowego elementu HTML (jak np. div).
+		- Jest szczególnie przydatny przy używaniu dyrektyw strukturalnych, takich jak *ngIf, *ngFor czy *ngSwitch.
+		- Pozwala na stosowanie wielu dyrektyw strukturalnych na jednym fragmencie kodu bez konieczności dodawania dodatkowych elementów.
+		- Pomaga uniknąć problemów z stylami CSS, które mogłyby wystąpić przy dodawaniu dodatkowych elementów div lub span.
+		- Jest często używany do warunkowego renderowania grup elementów.
+		- Może być używany do poprawy czytelności kodu poprzez logiczne grupowanie elementów.
+		- W przeciwieństwie do ng-template, ng-container nie wymaga użycia dyrektywy strukturalnej do renderowania zawartości.
+		  ![image.png](../assets/image_1721385018161_0.png){:height 305, :width 523}
+-
