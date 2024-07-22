@@ -1,11 +1,13 @@
 # IT-knowledge-base
+
 ## O projekcie
-To repozytorium zawiera moje osobiste notatki z nauki programowania, zorganizowane i zarządzane przy pomocy aplikacji **Logseq**. 
-Znajdziesz tu różnorodne zagadnienia, koncepcje i przykłady kodu, które poznałem podczas mojej podróży edukacyjnej w świecie programowania.
+
+To repozytorium zawiera moje notatki z nauki programowania, zorganizowane i zarządzane przy pomocy aplikacji **Logseq**. 
+Znajdziesz tu różnorodne zagadnienia, koncepcje i przykłady kodu, które poznałem podczas mojej podróży edukacyjnej w świecie programowania. 
+Główną stroną jest **"Programowanie"** z której rozchodzą się odnośniki do innych różnych podstron (Java, SpringBoot, Angular, AI, Git itp.)
 
 ### Czym jest Logseq? 
-Logseq to darmowa, open-source'owa aplikacja do zarządzania wiedzą i robienia notatek, która kładzie nacisk na prywatność i
-bezpieczeństwo danych użytkownika. 
+Logseq to darmowa, open-source'owa aplikacja do zarządzania wiedzą i robienia notatek. Wiecej inforamcji na https://logseq.com/ skąd można też pobrać aplikację.
 
 ### Oto kilka kluczowych cech Logseq:
 
