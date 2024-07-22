@@ -59,6 +59,7 @@
 			  ![image.png](../assets/image_1721294689527_0.png){:height 133, :width 425}
 			  ![image.png](../assets/image_1721294709584_0.png){:height 94, :width 448}
 - Dyrektywy w Angular
+  collapsed:: true
 	- **Dyrektywy strukturalne** – dodawanie / usuwanie elementów z DOM
 	  collapsed:: true
 		- Dyrektywa * **ngFor** -> pozwala iterować po kolekcji danych np. po tablicy i wyświetlić odpowiednie dane. Poniżej przykład.
@@ -97,4 +98,20 @@
 		- Może być używany do poprawy czytelności kodu poprzez logiczne grupowanie elementów.
 		- W przeciwieństwie do ng-template, ng-container nie wymaga użycia dyrektywy strukturalnej do renderowania zawartości.
 		  ![image.png](../assets/image_1721385018161_0.png){:height 305, :width 523}
--
+- Sposoby komunikacji między komponentami
+	- Dekorator **@Input()**
+	  collapsed:: true
+		- Za pomocą tego dekoratora komponent rodzic (parent) może przekazywać dane do komponentu dziecka(child). 
+		  Dekorator przyjmuje opcjonalną nazwę do użycia np. @Input('nazwa-wlasciwosci'). Konieczny jest import **Input** z **@angular/core** jak na załączonym poniżej obrazku.
+		  ![image.png](../assets/image_1721638316249_0.png){:height 274, :width 416}
+		  ![image.png](../assets/image_1721638335600_0.png){:height 125, :width 295}
+		  ![image.png](../assets/image_1721638351843_0.png)
+		  ![image.png](../assets/image_1721638363165_0.png){:height 133, :width 140}
+	- Dekorator **@Output()**
+	  collapsed:: true
+		- Za pomocą tego dekoratora komponent dziecko (child) może komunikować się z komponentem rodzicem (parent). Dekorator przyjmuje opcjonalną nazwę do użycia np. @Output('my-event'). Konieczny jest import **Output** oraz **EventEmitter** z **@angular/core**.
+		  id:: 669e1e29-b849-4f9c-b57f-65f36f96bb26
+		  ![image.png](../assets/image_1721638850820_0.png){:height 340, :width 492}
+		  ![image.png](../assets/image_1721638883917_0.png){:height 70, :width 499}
+		  ![image.png](../assets/image_1721638906755_0.png){:height 92, :width 653}
+		  ![image.png](../assets/image_1721638917251_0.png){:height 215, :width 356}

@@ -1,4 +1,5 @@
 ### Pytania rekrutacyjne
+collapsed:: true
 	- **1. Czym jest Spring?**
 		- Spring to framework do tworzenia aplikacji w Javie,  oferujący m.in. kontener IoC, wstrzykiwanie zależności, programowanie  aspektowe i wiele modułów ułatwiających tworzenie aplikacji.
 		- Źródło:
