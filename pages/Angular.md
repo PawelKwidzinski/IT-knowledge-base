@@ -99,6 +99,7 @@
 		- W przeciwieństwie do ng-template, ng-container nie wymaga użycia dyrektywy strukturalnej do renderowania zawartości.
 		  ![image.png](../assets/image_1721385018161_0.png){:height 305, :width 523}
 - Sposoby komunikacji między komponentami
+  collapsed:: true
 	- Dekorator **@Input()**
 	  collapsed:: true
 		- Za pomocą tego dekoratora komponent rodzic (parent) może przekazywać dane do komponentu dziecka(child). 
@@ -115,3 +116,25 @@
 		  ![image.png](../assets/image_1721638883917_0.png){:height 70, :width 499}
 		  ![image.png](../assets/image_1721638906755_0.png){:height 92, :width 653}
 		  ![image.png](../assets/image_1721638917251_0.png){:height 215, :width 356}
+- Lifecycle hooks w Angular
+	- to specjalne metody, które pozwalają na wykonanie kodu w kluczowych momentach cyklu życia komponentu lub dyrektywy.
+		- Główne lifecycle hooks:
+			- ![image.png](../assets/image_1721730361177_0.png)
+			- Odpalane jednorazowo:
+				- **ngOnInit() - OnInit**
+				  Uruchamia się dokładnie raz w całym cyklu życia dyrektywy/komponentu, gdy komponent się zainicjalizuje. Można wykonywać tutaj kosztowne operacje, których nie powinno umieszczać się w konstruktorze.
+				- **ngAfterContentInit() - AfterContentInit**
+				  Uruchamia się po tym, jak zainicjalizują się elementy dostarczone poprzez projekcję treści, czyli element <ng-content>. Tutaj mamy dostęp do elementów html / komponentów, które są wyświetlane za pomocą <ng-content>.
+				- **ngAfterViewInit() - AfterViewInit**
+				  Uruchamia się raz po pierwszym wywołaniu ngAfterContentChecked(). Używana do
+				  reagowania, gdy Angular w pełni zainicjalizuje widok komponentu oraz widok jego child
+				  komponentów (albo widok który zawiera dyrektywę).
+				- **ngOnDestroy() - OnDestroy**
+				  Uruchamia się przed tym, jak Angular zniszczy komponent / dyrektywę. Tutaj dokonuje
+				  się „czyszczenia” zależności itp. by uniknąć wycieków pamięci.
+			- Odpalane wielokrotnie:
+				- **OnChanges - ngOnChanges()** - Uruchamia się przy tworzeniu komponentu (jeśli istnieją jakieś property z dekoratorem @Input()). Odpala się za każdym razem, gdy zmienia się wartość property z @Input().
+				- **DoCheck - ngDoCheck()** - Uruchamia się za każdym razem, gdy zadziała detekcja zmian w Angular. Używana do wykrywania zmian, które Angular mógł pominąć / wykonywania jakiejś operacji po każdym wywołaniu detekcji zmian.
+				- **AfterContentChecked - ngAfterContentChecked()** - Uruchamia się po ngAfterContentInit(), a następnie po każdym wywołaniu ngDoCheck(), kiedy detekcja zmian sprawdzi widok dostarczany poprzez projekcję treści (ng-content).
+				- **AfterViewChecked - ngAfterViewChecked()** - Uruchamia się po ngAfterViewInit() i następnie po każdym ngAfterContentChecked(). Używany do reagowania, gdy Angular już sprawdzi widok komponentu i widok child komponentów.
+-
