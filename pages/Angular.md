@@ -117,6 +117,7 @@
 		  ![image.png](../assets/image_1721638906755_0.png){:height 92, :width 653}
 		  ![image.png](../assets/image_1721638917251_0.png){:height 215, :width 356}
 - Lifecycle hooks w Angular
+  collapsed:: true
 	- to specjalne metody, które pozwalają na wykonanie kodu w kluczowych momentach cyklu życia komponentu lub dyrektywy.
 		- Główne lifecycle hooks:
 			- ![image.png](../assets/image_1721730361177_0.png)
@@ -137,4 +138,27 @@
 				- **DoCheck - ngDoCheck()** - Uruchamia się za każdym razem, gdy zadziała detekcja zmian w Angular. Używana do wykrywania zmian, które Angular mógł pominąć / wykonywania jakiejś operacji po każdym wywołaniu detekcji zmian.
 				- **AfterContentChecked - ngAfterContentChecked()** - Uruchamia się po ngAfterContentInit(), a następnie po każdym wywołaniu ngDoCheck(), kiedy detekcja zmian sprawdzi widok dostarczany poprzez projekcję treści (ng-content).
 				- **AfterViewChecked - ngAfterViewChecked()** - Uruchamia się po ngAfterViewInit() i następnie po każdym ngAfterContentChecked(). Używany do reagowania, gdy Angular już sprawdzi widok komponentu i widok child komponentów.
+- Pipe
+	- To proste funkcje, używane w szablonie HTML, które przyjmują jakąś wartość na
+	  wejściu i zwracają ją w zmienionej postaci
+	- Używane do formatowania string’ów, walut, liczb, dat itp. 
+	  ![image.png](../assets/image_1721905557784_0.png){:height 113, :width 296}
+	  ![image.png](../assets/image_1721905598400_0.png){:height 111, :width 350}
+	- Wbudowane Pipe
+	  collapsed:: true
+		- AyncPipe (async) – obsługa asynchronicznych działań (Promise/Observable)
+		- CurrencyPipe (currency) – wyświetlanie liczb w formie walut
+		- DatePipe (date) – formatowanie dat (można dopasować do dat lokalnych)
+		- DecimalPipe (number) – formatowanie liczb zależnie od ustawień lokalnych i separatora
+		- JsonPipe (json) – zamienia obiekt w jego reprezentacje w postaci JSON (którą można wyświetlić za pomocą interpolacji)
+		- KeyValuePipe (keyvalue) – zamienia obiekt w tablicę z parami klucz-wartość
+		- LowerCasePipe (lowercase) – zmienia cały tekst na pisany małymi literami
+		- PercentPipe (percent) – zamienia liczbę na jej reprezentację w procentach
+		- SlicePipe (slice) – tworzy nową tablicę lub string zawierający wycięty kawałek początkowej
+		  wartości
+		- UpperCasePipe (uppercase) – zmienia cały tekst na pisany dużymi literami
+		- TitleCasePipe (titlecase) – formatuje zdanie, żeby każde słowo zaczynało się z dużej litery
+	- Tworzenie własnych Pipe -> **ng g p shared/pipes/first-letter-uppercase**
+	  ![image.png](../assets/image_1721905757726_0.png){:height 304, :width 431}
+	  ![image.png](../assets/image_1721905778696_0.png){:height 262, :width 251}
 -

@@ -9,6 +9,7 @@
 		  mikroserwisową z innego kumputera który byłby w tej samej sieci domowej.
 		  Jak wykonać oba kroki?
 - Jak skonfigurować lokalnie AI (OPEN-WEBUI + ollama3)
+  collapsed:: true
 	- docker run -d -p 1000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 	- install wsl in your PowerShell:
 	  wsl --install
@@ -19,3 +20,5 @@
 	  /bye
 	- To exit Ubuntu type:
 	  exit
+- Techniki projektowania promptów
+	- ![image.png](../assets/image_1721762588210_0.png)
