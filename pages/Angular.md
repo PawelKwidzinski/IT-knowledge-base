@@ -139,6 +139,7 @@
 				- **AfterContentChecked - ngAfterContentChecked()** - Uruchamia się po ngAfterContentInit(), a następnie po każdym wywołaniu ngDoCheck(), kiedy detekcja zmian sprawdzi widok dostarczany poprzez projekcję treści (ng-content).
 				- **AfterViewChecked - ngAfterViewChecked()** - Uruchamia się po ngAfterViewInit() i następnie po każdym ngAfterContentChecked(). Używany do reagowania, gdy Angular już sprawdzi widok komponentu i widok child komponentów.
 - Pipe
+  collapsed:: true
 	- To proste funkcje, używane w szablonie HTML, które przyjmują jakąś wartość na
 	  wejściu i zwracają ją w zmienionej postaci
 	- Używane do formatowania string’ów, walut, liczb, dat itp. 
@@ -161,4 +162,5 @@
 	- Tworzenie własnych Pipe -> **ng g p shared/pipes/first-letter-uppercase**
 	  ![image.png](../assets/image_1721905757726_0.png){:height 304, :width 431}
 	  ![image.png](../assets/image_1721905778696_0.png){:height 262, :width 251}
--
+- Biblioteka RxJS
+	-
