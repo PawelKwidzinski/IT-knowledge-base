@@ -163,4 +163,4 @@
 	  ![image.png](../assets/image_1721905757726_0.png){:height 304, :width 431}
 	  ![image.png](../assets/image_1721905778696_0.png){:height 262, :width 251}
 - Biblioteka RxJS
-	-
+	- test
