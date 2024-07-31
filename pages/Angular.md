@@ -50,7 +50,8 @@
 				- Operator ()
 				  ![image.png](../assets/image_1721294491434_0.png){:height 151, :width 422}
 				  ![image.png](../assets/image_1721294517944_0.png){:height 101, :width 423}
-		- **Two-way Data Binding** – zarówno z szablonu do pliku .ts, jak i z pliku .ts do szablonu. Połączenie Property Binding oraz Event Binding za pomocą dyrektywy [(ngModel)]
+		- **Two-way Data Binding** – czyli zarówno z szablonu do pliku .ts, jak i z pliku .ts do szablonu. Połączenie Property Binding oraz Event Binding za pomocą dyrektywy [(ngModel)]
+		  id:: 6698deda-4439-46aa-96bb-dd1badcb8fd4
 		  collapsed:: true
 		  (konieczny import modułu FormsModule)
 			- Służy do synchronizacji danych między koponentem, a szablonem (w obie strony). Zmiana danych w szablonie automatycznie zmieni wartość w klasie komponentu, a zmiana wartości w klasie komponentu automatycznie zostanie wyświetlona w szablonie.
@@ -163,4 +164,104 @@
 	  ![image.png](../assets/image_1721905757726_0.png){:height 304, :width 431}
 	  ![image.png](../assets/image_1721905778696_0.png){:height 262, :width 251}
 - Biblioteka RxJS
-	- test test
+  collapsed:: true
+	- Czym jest RxJs
+	  collapsed:: true
+		- RxJS to biblioteka (JavaScript) do programowania reaktywnego, czyli asynchronicznego
+		  programowania związanego z wykorzystaniem obserwowalnych strumieni danych. RxJS dostarcza typ tzw. Observable.
+		- Angular używa biblioteki RxJS do m.in.: obsługi żądań HTTP (zwraca tzw. Observable),
+		  w formularzach, obsługi routingu oraz przy EventEmitter (dziedziczy po klasie Subject, który jest Observable).
+	- Czym jest Observable i Observer
+	  collapsed:: true
+		- ![image.png](../assets/image_1722243644187_0.png){:height 188, :width 360}
+		  ![image.png](../assets/image_1722243668623_0.png){:height 357, :width 420}
+		- Observable – to obiekt, który emituje wartości przekazywane asynchronicznie (strumień danych). Możemy się do niego subskrybować za pomocą metody subscribe() i nasłuchiwać na pojawiające się wartości. Kiedy subskrybujemy się do Observable – to zwraca nam obiekt Subscription (możemy przypisać go do zmiennej i np. użyć w OnDestroy do odsubskrybowania)
+		- Observer – to obiekt, nasłuchuje na wartości emitowane przez Observable. Można go rozumieć
+		  jako odbiorcę danych, który w jakiś sposób reaguje na pojawiające się wartości. Obiekt Observer składa się z trzech funkcji – next() (kiedy Observable emituje nową wartość), error() (Observable zwraca błąd), complete() (kiedy Observable kończy emisję wartości). Obiekt Observer przekazujemy do metody subscribe().
+	- Tworzenie Observera
+	  collapsed:: true
+		- Zamiast do ciała metody subscribe() przekazywać nawiasy klamrowe (obiekt Observer) i tam
+		  reagować na next, error i complete możemy utworzyć Observer osobno, dzięki czemu będziemy mogli go stosować w kilku miejscach (komponentach itd.)
+		  ![image.png](../assets/image_1722243937943_0.png){:height 178, :width 349}
+		  ![image.png](../assets/image_1722243952738_0.png){:height 283, :width 421}
+	- Observable czy Promise?
+	  collapsed:: true
+		- **Promise** są wbudowane w język JavaScript i są wykorzystywane do asynchronicznego działania kodu. Jednak Observable dają większe możliwości, jeśli chodzi o pracę z asynchronicznym kodem.
+		- ***Promise***:
+		  collapsed:: true
+			- Jest eager, tzn. że wykonuje się od razu.
+			- Dostarcza jedną wartość.
+			- Nie można przerwać jego działania.
+			- Nie posiada wbudowanych operatorów, łączenie za pomocą .then().
+			- Obsługa błędów poprzez .catch().
+		- ***Observable:***
+		  collapsed:: true
+			- Jest lazy, tzn. wykonuje się dopiero po subskrypcji.
+			- Może dostarczać strumień z wieloma wartościami.
+			- Można przerwać jego działanie poprzez odsubskrybowanie.
+			- Posiada wbudowane operatory do wpływania na dane przychodzące ze strumienia danych.
+			- Dedykowane operatory do obsługi błędów.
+	- Czym jest Subject?
+		- Subject – to rodzaj Observable, które działa również jako Observer. Można go rozumieć jako
+		  połączenie strumienia danych i odbiorcy, który może jednocześnie emitować wartości (metoda
+		  **next()**) i nasłuchiwać (subskrybować) na wartości. Nie przyjmuje żadnych danych wejściowych. Posiada kilka odmian (m.in. **BehaviorSubject** – który działa tak samo oprócz tego, że przyjmuje dane wejściowe oraz przechowuje ostatnio emitowaną wartość).
+		  ![image.png](../assets/image_1722248621971_0.png){:height 274, :width 280}
+		  ![image.png](../assets/image_1722248638123_0.png){:height 308, :width 416}
+		  W powyższym kodzie w metodzie **changeName()** za każdym razem, gdy właściwość name otrzyma nową wartość emitujemy tą wartość poprzez **Subject**. Dzięki temu możemy subskrybować się do tego **Subject** w różnych komponentach i reagować na zmianę **name**.
+	- Kiedy trzeba użyć **unsubscribe()**, a kiedy nie?
+		- Do Observable możemy się subskrybować (metoda **subscribe()**), ale i odsubskbrybować (metoda **unsubscribe()**). W niektórych sytuacjach np. kiedy pracujemy ze skończonymi strumieniami danych nie ma konieczności używania unsubscribe().
+		- **Trzeba:**
+		  collapsed:: true
+			- Subskrybujemy się do Subject/BehaviorSubject.
+			- Subskrybujemy się do eventów DOM za pomocą fromEvent().
+			- Subskrypcja do Store w NgRx.
+			- Nieskończone strumienie danych – np. metoda interval().
+			- Formularze – metoda valueChanges(), czyli subskrypcja do kontrolki formularza.
+		- **Nie trzeba:**
+		  collapsed:: true
+			- Używamy skończonego strumienia **of()**.
+			- Subskrybujemy się do Observable z HttpClient (żadania HTTP).
+			- Subskrybujemy się do Observable z Routera.
+			- Po wykorzystaniu **AsyncPipe**.
+		- Jak używać unsubscribe()
+		  collapsed:: true
+			- Bardzo ważne jest żeby używać unsubscribe(), wtedy kiedy jest to konieczne! Inaczej po zniszczeniu komponentu subskrypcja dalej będzie działać, co może spowodować bardzo duże wycieki pamięci i problemy z działaniem aplikacji.
+			  ![image.png](../assets/image_1722249295235_0.png){:height 95, :width 277}
+			  ![image.png](../assets/image_1722249306750_0.png){:height 333, :width 466}
+			- Alternatywny sposób na unsubscribe()
+			  ![image.png](../assets/image_1722249404088_0.png){:height 380, :width 429}
+		- Tworzenie własnych Observable (operatory tworzące)
+		  collapsed:: true
+			- RxJS udostępnia funkcję do tworzenia własnych Observable:
+				- of()
+				- from()
+				- interval()
+				- timer()
+				- fromEvent()
+				- defer()
+			- ![image.png](../assets/image_1722249568873_0.png){:height 153, :width 483}
+	- Operatory RxJS
+	  ![image.png](../assets/image_1722250480308_0.png){:height 154, :width 529}
+		- Operatory w RxJS to funkcje, które pozwalają na transformację, filtrowanie i manipulowanie
+		  strumieniami danych w czasie rzeczywistym.
+		- Używanie operatorów jest dostępne dzięki metodzie **.pipe()**.
+		- Jest podział zależnie od tego, co wykonuje dany operator. Istnieją operatory kombinacyjne,
+		  filtrujące, operatory matematyczne, operatory transformujące itd.
+		- Oprócz wbudowanych operatorów RxJS można tworzyć także własne, ale istnieje duża szansa że biblioteka RxJS już zawiera operator, który będzie nam potrzebny.
+- Rodzaje formularzy w Angular
+  collapsed:: true
+	- Jeśli chodzi o pracę z formularzami w Angular, to jeśli Nasz formularz ma więcej niż jedną kontrolkę to lepiej wykorzystać **Reactive Forms** (choć nie jest to wymóg). **Reactive Forms** są bardziej elastyczne i skalowalne niż **Template Driven Forms**. Do tego **Reacive Forms** ułatwiają tworzenie testów jednostkowych dla formularzy i są oparte na **Observable** (każda kontrolka to obiekt FormControl, która pozwala używać metodę valueChanges(), która zwraca Observable).
+	- **Template Driven Forms** - formularze są tworzone bezpośrednio w szablonie HTML.
+		- Aby korzystać z **Template Driven Forms** moduł Angular, w którym pracujemy musi importować wbudowany moduł **FormsModule** (często import FormsModule umieszcza się w tzw. SharedModule).
+		  ![image.png](../assets/image_1722418546258_0.png){:height 88, :width 220}
+		- Po imporcie FormsModule w komponentach naszego modułu otrzymujemy dostęp do trzech dyrektyw:
+			- NgModel (używana do ((6698deda-4439-46aa-96bb-dd1badcb8fd4)) )
+			- NgForm (umożliwia śledzenie aktualnej wartości kontrolek formularza i statusu walidatorów kontrolek, po imporcie FormsModule domyślnie wszystkie formularze mają aktywną tą dyrektywę)
+			- NgModelGroup (pozwala grupować kontrolki)
+		- Ważne! Używając dyrektywy ngModel musimy także dodać atrybut name do tej kontrolki!
+		  collapsed:: true
+			- ![image.png](../assets/image_1722418734691_0.png){:height 88, :width 390}
+		- Dodanie dyrektywy **ngModel** do kontrolki dodaje także nowe klasy w ramach tej kontrolki formularza. Dzięki temu możemy zmieniać style naszej kontrolki zależnie od tego, czy ma wpisane poprawne dane, czy została zaznaczona, czy jej wartość się zmieniła.
+		  ![image.png](../assets/image_1722418821844_0.png)
+	- **Reactive Forms** - formularze oraz związana z nimi logika są tworzone w pliku TypeScript. Umożliwiają dynamiczne tworzenie pól formularza.
+-
