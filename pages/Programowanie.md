@@ -4,5 +4,6 @@
 - [[Git]]
 - [[GitHub]]
 - [[NoSql]]
+- [[HTTP]]
 - [[AI]]
 - [[CV - notatki]]

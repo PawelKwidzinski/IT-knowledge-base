@@ -264,4 +264,14 @@
 		- Dodanie dyrektywy **ngModel** do kontrolki dodaje także nowe klasy w ramach tej kontrolki formularza. Dzięki temu możemy zmieniać style naszej kontrolki zależnie od tego, czy ma wpisane poprawne dane, czy została zaznaczona, czy jej wartość się zmieniła.
 		  ![image.png](../assets/image_1722418821844_0.png)
 	- **Reactive Forms** - formularze oraz związana z nimi logika są tworzone w pliku TypeScript. Umożliwiają dynamiczne tworzenie pól formularza.
--
+- Json-server
+  collapsed:: true
+	- Instalacja
+		- w PowerShellu wpisujemy komendę `npm install --save-dev json-server@0.17.4`. W pliku **package.json** w sekcji "devDependencies" doda nam się właściwa dependencja
+		  ![image.png](../assets/image_1722593898408_0.png){:height 285, :width 396}
+		- następnie w tym samym pliku **package.json** w sekcji **scripts** tuż pod **"start"** dodajemy:
+		  ![image.png](../assets/image_1722594211648_0.png){:height 177, :width 556}
+		- na samym końcu dodajemy plik **db.json** do naszego głownego folderu w projekcie, gdzie tworzymy nasze dane testowe zgodne z naszymi obiektami w aplikacji:
+		  ![image.png](../assets/image_1722594389137_0.png){:height 211, :width 603}
+	- Uruchomienie
+		- otwieramy drugie okno w terminalu PowerShell i wpisujemy -> `npm run start:backend`
