@@ -6,4 +6,5 @@
 - [[NoSql]]
 - [[HTTP]]
 - [[AI]]
+- [[Kursy]]
 - [[CV - notatki]]
