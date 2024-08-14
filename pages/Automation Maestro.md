@@ -24,4 +24,22 @@
 		- ![image.png](../assets/image_1723202215585_0.png){:height 344, :width 526}
 		- ![image.png](../assets/image_1723202291515_0.png){:height 315, :width 527}
 		- ![image.png](../assets/image_1723202369404_0.png){:height 359, :width 527}
+- Praca z Gitem i praca w zespole
+	- DevContainer
+	  collapsed:: true
+		- Jak powyższa nazwa wskazuje potrzebujemy zatem mieć zainstalowane środowisko do uruchamiania kontenerów- np. Docker Desktop oraz edytor Visual Studio Code.
+		- Praca w zespole z Visiual Studio Code Dev Containers:
+		  ![image.png](../assets/image_1723626701773_0.png){:height 388, :width 624}
+		-
+	- Commit Message (Convetional Commits) - zbiór dobrych praktyk
+	  id:: 66bc86a6-71f9-4b67-9023-7bb868b2a44b
+		- Określony format
+		  ![image.png](../assets/image_1723631791729_0.png){:height 292, :width 623}
+		- Typ commita
+		  ![image.png](../assets/image_1723631957747_0.png){:height 343, :width 624}
+		- Opis commita
+		  ![image.png](../assets/image_1723632097221_0.png){:height 371, :width 626}
+		  ![image.png](../assets/image_1723632187162_0.png){:height 357, :width 628}
+		- Podsumowanie: **Conventional Commit**
+		  ![image.png](../assets/image_1723632287994_0.png){:height 364, :width 540}
 -
