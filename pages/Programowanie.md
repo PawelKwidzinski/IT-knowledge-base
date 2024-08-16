@@ -8,3 +8,4 @@
 - [[AI]]
 - [[Kursy]]
 - [[CV - notatki]]
+- [[My Projects]]

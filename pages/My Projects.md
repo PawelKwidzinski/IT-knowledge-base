@@ -1,0 +1,15 @@
+- Allergy Food (draw)
+	- Hista-food-ms
+		- baza składników żywnościowych, które zawierają histaminę
+	- Ingredients-ms
+		- CRUD składników żywnościowych
+		- sprawdzanie skł. żywn. pod kątem histaminy
+		- dodawanie składników z produktów poprzez zrobienie zdjęcia (AI)
+	- Meal-management-ms
+		- CRUD dla tworzenia posiłków
+	- Cook-book-ai-ms
+		- kulinarny doradca, który pomoże nam utworzyć posiłki z dostępnych składników (które są w lodówce/w domu)
+	- Food-items-ms
+		- CRUD dla produktów które są w domu
+		- dodanie produktu za pomocą zrobienia zdjęcia (OCR/AI)
+		- dodanie produktów ze zdj. paragonu (AI)
