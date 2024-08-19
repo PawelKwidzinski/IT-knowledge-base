@@ -1,6 +1,7 @@
 - Allergy Food (draw)
 	- Hista-food-ms
 		- baza składników żywnościowych, które zawierają histaminę
+		- wyszukiwanie składników po wpisaniu częściowej nazwy
 	- Ingredients-ms
 		- CRUD składników żywnościowych
 		- sprawdzanie skł. żywn. pod kątem histaminy
@@ -12,4 +13,8 @@
 	- Food-items-ms
 		- CRUD dla produktów które są w domu
 		- dodanie produktu za pomocą zrobienia zdjęcia (OCR/AI)
-		- dodanie produktów ze zdj. paragonu (AI)
+		- dodanie produktów ze zdj. paragonu (AI - ollama)
+			- https://howtodoinjava.com/spring-ai/spring-ai-ollama-example/
+			- https://ollama.com/blog/ollama-is-now-available-as-an-official-docker-image
+			- https://docs.spring.io/spring-ai/reference/api/chat/ollama-chat.html#_multimodal
+			- https://github.com/ollama4j/ollama4j?tab=readme-ov-file
