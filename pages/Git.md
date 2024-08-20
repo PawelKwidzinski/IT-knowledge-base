@@ -1,5 +1,4 @@
 - Połączenie się ze swoim repozytorium (aby nie ciągle wpisywać hasła po pushu do repo)
-  collapsed:: true
 	- https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 	  **git remote set-url origin git@github.com:username/repo.git**
 	  **git remote -v**
@@ -18,4 +17,5 @@
 	  Per repo basis you could also edit `.git/config` manually instead.
 	- Done!
 - ((66bc86a6-71f9-4b67-9023-7bb868b2a44b))
+-
 -
