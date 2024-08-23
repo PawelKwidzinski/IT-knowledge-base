@@ -2,12 +2,12 @@
 	- Hista-food-ms
 		- baza składników żywnościowych, które zawierają histaminę
 		- wyszukiwanie składników po wpisaniu częściowej nazwy
-	- Ingredients-ms
+	- Ingredients-mgmt-ms
 		- CRUD składników żywnościowych (nazwa, lista pasujących składników z hista-food-ms
 		- sprawdzanie skł. żywn. pod kątem histaminy
-		- dodawanie składników z produktów poprzez zrobienie zdjęcia (AI)
 	- Food-product-ms
 		- CRUD dla produktów spożywczych (nazwa, lista składników, ingredient_id, z jakiego sklepu, kaloryczność na 100g)
+		- dodawanie składników z produktów poprzez zrobienie zdjęcia (AI)
 	- Meal-management-ms
 		- CRUD dla tworzenia posiłków z produktów
 	- Cook-book-ai-ms

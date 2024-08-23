@@ -4,7 +4,6 @@
 	  **git remote -v**
 	  https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh
 - Ustawienie użytkownika GitHub lokalnie
-  collapsed:: true
 	- https://stackoverflow.com/questions/22844806/how-to-change-my-git-username-in-terminal
 	- In your terminal, navigate to the repo you want to make the changes in.
 	- Execute `git config --list` to check current username & email in your local repo.

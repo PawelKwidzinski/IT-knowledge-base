@@ -15,7 +15,7 @@
 	  wsl --install
 	- start Ubuntu by typing in PS:
 	  Ubuntu
-	  ollama run llama3
+	  ollama run llama3.1
 	- To exit ollama type:
 	  /bye
 	- To exit Ubuntu type:
