@@ -6,6 +6,7 @@
 - [[NoSql]]
 - [[HTTP]]
 - [[AI]]
+- [[Linux]]
 - [[Kursy]]
 - [[CV - notatki]]
 - [[My Projects]]
