@@ -7,6 +7,7 @@
 - [[HTTP]]
 - [[AI]]
 - [[Linux]]
+- [[Fronted]]
 - [[Kursy]]
 - [[CV - notatki]]
 - [[My Projects]]

@@ -116,7 +116,6 @@
 	  [8] https://www.javaguides.net/2023/11/spring-boot-microservices-design-patterns.html
 	  [9] https://edge1s.com/pl/blog/mikroserwisy-java/
 - Allergy Food -Task (From Perplexity)
-  collapsed:: true
 	- Rozumiem, że potrzebujesz szczegółowego planu zadań dla każdego mikroserwisu. Oto rozpisany plan z uwzględnieniem poziomów trudności, testów i dokumentacji Swagger. Poziomy trudności oznaczam jako: Łatwy (Ł), Średni (Ś), Trudny (T).
 	- ## 1. User-Service
 	  
