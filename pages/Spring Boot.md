@@ -68,3 +68,4 @@ collapsed:: true
 	- Do czego służy klasa RestTemplate?
 	- Do czego służą adnotacje takie jak @Before, @Around, @After?
 	- Czy kojarzysz adnotacje takie jak @Email, @Max, @Min, @Null, @Pattern? Do czego one służą?
+- Spring Security
