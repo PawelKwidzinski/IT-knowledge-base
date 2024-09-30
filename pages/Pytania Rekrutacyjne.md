@@ -1,4 +1,4 @@
-### Pytania rekrutacyjne
+### Java
 collapsed:: true
 	- **Jakim językiem programowania jest JAVA (OOP, ale elementy funkcyjnego przy streamach)?**
 	  collapsed:: true
@@ -187,14 +187,11 @@ collapsed:: true
 		  hashCode()
 		  
 		  Źródło: [http://karolwojcik.net/java-class-design-67-nadpisywanie-metod-klasy-object/](http://karolwojcik.net/java-class-design-67-nadpisywanie-metod-klasy-object/)
-	- collapsed:: true
-	  
-	  **Czym sie rozni "==" od equals?**
+	- **Czym sie rozni "==" od equals?**
 		- Do sprawdzenia “równości” typów prostych służą operatory == oraz !=. Dzięki nim możemy porównać ze sobą każdą zmienną typu prostego. Wynikiem takiego porównania jest wartość typu boolean – true jeśli porównywane obiekty są równe i false w przeciwnym wypadku.
 		- Używając operatora == do porównywania obiektów uzyskamy błędne rezultaty. Do porównania tego typu powinniśmy używać metody equals.
-	- collapsed:: true
-	  
-	  **Czym są kolekcje, jakie znamy rodzaje kolekcji i opisać je?**
+	- **Czym są kolekcje, jakie znamy rodzaje kolekcji i opisać je?**
+	  collapsed:: true
 		- Źródła:
 		  [https://1024kb.pl/programowanie/java/kolekcje-w-javie/](https://1024kb.pl/programowanie/java/kolekcje-w-javie/)
 		  https://www.samouczekprogramisty.pl/kolekcje-w-jezyku-java/
@@ -293,3 +290,14 @@ collapsed:: true
 	  collapsed:: true
 		- **Stub** to obiekt, który się podstawia w teście za właściwą implementację. Stub pozwala jedynie na określenie zachowania obiektu, który imituje.
 		- **Mock** to także obiekt, który podstawiamy w teście za właściwą implementację. W jego przypadku poza określeniem zachowania, mamy możliwość jego weryfikacji. Innymi słowy mock’i pozwalają sprawdzać czy dany obiekt został użyty, jakie metody były wywołane w trakcie testu, jakie parametry były użyte w trakcie tych wywołań.
+- ### Spring
+	- **Co to jest Spring Framework?**
+	  collapsed:: true
+		- Spring Framework to kompleksowy framework dla Javy, który dostarcza
+	- **Na czym polega wstrzykiwanie zależności (Dependency Injection) w Spring?**
+	  collapsed:: true
+		- Wstrzykiwanie zależności (Dependency Injection) to jeden z fundamentalnych aspektów frameworku Spring i wpisuje się w szerszy kontekst wzorca Inversion of Control. Wstrzykiwanie zależności polega na tym, że zewnętrzny system (w tym przypadku kontener Springa) tworzy i dostarcza obiekty oraz uch zależności, a nie są one tworzone wprost w klasach.
+		  
+		  Klasy które reprezentują serwisy w naszej aplikacji, często wymagają dostępu do innch serwisów czy obiektów, żeby móc poprawnie działać - są od nich zależne. Zamiast tworzyć te obiekty wewnąrz klas albo zmuszać do przekazywania ich w konstruktorze. Spring automatycznie dostarczy potrzebne zależności, o ile odpowiednio ta zadeklarujemy (np za pomocą adnotacji @Autowired).
+		  
+		  Zalętą takiego podejscia to między innymi łatwość testowania (można łatwo podmienić rzeczywiste implementacje na atrapy w testach jednostkowych) i większa czytelność kodu.
