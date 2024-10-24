@@ -291,6 +291,7 @@ collapsed:: true
 		- **Stub** to obiekt, który się podstawia w teście za właściwą implementację. Stub pozwala jedynie na określenie zachowania obiektu, który imituje.
 		- **Mock** to także obiekt, który podstawiamy w teście za właściwą implementację. W jego przypadku poza określeniem zachowania, mamy możliwość jego weryfikacji. Innymi słowy mock’i pozwalają sprawdzać czy dany obiekt został użyty, jakie metody były wywołane w trakcie testu, jakie parametry były użyte w trakcie tych wywołań.
 - ### Spring
+  collapsed:: true
 	- **Co to jest Spring Framework?**
 	  collapsed:: true
 		- Spring Framework to kompleksowy framework dla Javy, który dostarcza
@@ -301,3 +302,35 @@ collapsed:: true
 		  Klasy które reprezentują serwisy w naszej aplikacji, często wymagają dostępu do innch serwisów czy obiektów, żeby móc poprawnie działać - są od nich zależne. Zamiast tworzyć te obiekty wewnąrz klas albo zmuszać do przekazywania ich w konstruktorze. Spring automatycznie dostarczy potrzebne zależności, o ile odpowiednio ta zadeklarujemy (np za pomocą adnotacji @Autowired).
 		  
 		  Zalętą takiego podejscia to między innymi łatwość testowania (można łatwo podmienić rzeczywiste implementacje na atrapy w testach jednostkowych) i większa czytelność kodu.
+	- **Czym różni się wstrzykiwanie zależności przez konstruktor od wstrzykiwania zależności przez setter w Spring?**
+		- **Wsztrzykiwanie zależności przez konstruktor** (Constructor-Based Dependecy Injection) polega na dostarczaniu zależności do beanóœ za pomocą ich kontrukotrów. Główną zalętą tego rozwiązania jest brak możliwości stworzenia beanu bez spełnienia wszystkich jego zależności. Dzięki temu bean jest zawsze w pełni zainicjalizowany.
+		  ```
+		  @Autowired
+		  public ExampleClass(AnotherBean anotherBean) {
+		    this.anotherBean = anotherBean
+		  }
+		  ```
+		  **Wstrzykiwanie zależności poprzez metody setterów** (Setter-Based Dependency Injection) z kolei daje łatwość modyfikacji zależności po zainicjonizowaniu beanu. Beany mogą być stworzone bez spełnienia wszyskich zależności, a te można dostarczać i zmieniać w dowolnym momencie.
+		  ```
+		  @Autowired
+		  public void setAnotherBean(AnotherBean anotherBean) {
+		    this.anotherBean = anotherBean
+		  }
+		  ```
+		  Oba podejścia mają swoje wady i za;ety, i wybór między nimi zazwyczaj zależy od specyfiki projektu. Orientowane na konstruktor wstrzykiwanie zależnośći jest zalecane przez Spring Team ze względu na gwarancję pełnej inicjalizacji beanów, jednak w niektórych przypadkach (np. cykliczne zależności) wymusza użycie wstrzykiwania poprzez setter.
+		- Co to jest Spring Security i do czego służy?
+			- Spring Security to zaawansowany framework bezpieczeństwa dla aplikacji korporacyjnych języka Java. Jest to rozszerzenie frameworku Spring MVC. Znajduje zaawansowane zastosowanie szczególnie w aplikacjach internetowych służących do budowy serwisów REST API. Spring Security pozwala na kontrolę dostępu do zasobów oraz ochornę danych za pomocą szyfrowania.
+			  
+			  Główne cechy Spring Security:
+			  1.
+- ### Java - eng
+	- **1. How does JDK differ from JRE?** #card
+	  collapsed:: true
+		- **JDK** (Java Development Kit) and JRE (Java Runtime Environment) are two different sets of tools for working with the Java language, but they serve different roles.
+		  
+		  **JRE** is the runtime environment for Java applets and applications. It contains the JVM (Java Virtual Machine) and a set of class libraries. All of this is necessary to run an application written in Java, but it does not allow for the creation of new applications.
+		  
+		  On the other hand, JDK is a set of tools for Java developers that allow for developing, compiling, and debugging Java applications. It includes the full JRE plus developer tools such as the javac compiler, debugger, tools for creating documentation, etc.
+		  
+		  In conclusion, if you just want to run a Java application, you need JRE. If you plan to create your own applications, you will need JDK, which also includes JRE.
+	-

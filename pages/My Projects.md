@@ -1,10 +1,9 @@
 - Allergy Food (draw)
-  collapsed:: true
 	- Hista-food-ms
 		- baza składników żywnościowych, które zawierają histaminę
 		- wyszukiwanie składników po wpisaniu częściowej nazwy (jaka baza daych bedzie najlepsza dla tego typu operacji)
 	- Ingredients-mgmt-ms
-		- CRUD składników żywnościowych (nazwa, lista pasujących składników z hista-food-ms
+		- CRUD składników żywnościowych (nazwa, lista pasujących składników z hista-food-ms)
 	- Food-product-ms
 		- CRUD dla produktów spożywczych (nazwa, lista składników, ingredient_id, z jakiego sklepu, kaloryczność na 100g)
 		- sprawdzanie skł. żywn. pod kątem histaminy
@@ -18,7 +17,6 @@
 		- dodanie produktu za pomocą zrobienia zdjęcia (OCR/AI)
 		- dodanie produktów ze zdj. paragonu (AI - ((66c492b4-3301-4664-9db8-527c4f8a70a7)) )
 - Allergy Food (From Perplexity)
-  collapsed:: true
 	- Dziękuję za przedstawienie Twojego pomysłu na projekt mikroserwisowy. To bardzo interesująca koncepcja, która ma duży potencjał zarówno jako projekt portfolio, jak i praktyczne narzędzie dla alergików. Pozwól, że przeanalizuję Twój zarys i zaproponuję kilka ulepszeń i rozszerzeń.
 	- ## Architektura mikroserwisowa
 	  
@@ -116,6 +114,7 @@
 	  [8] https://www.javaguides.net/2023/11/spring-boot-microservices-design-patterns.html
 	  [9] https://edge1s.com/pl/blog/mikroserwisy-java/
 - Allergy Food -Task (From Perplexity)
+  collapsed:: true
 	- Rozumiem, że potrzebujesz szczegółowego planu zadań dla każdego mikroserwisu. Oto rozpisany plan z uwzględnieniem poziomów trudności, testów i dokumentacji Swagger. Poziomy trudności oznaczam jako: Łatwy (Ł), Średni (Ś), Trudny (T).
 	- ## 1. User-Service
 	  
