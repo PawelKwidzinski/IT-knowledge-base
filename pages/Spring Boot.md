@@ -69,6 +69,32 @@ collapsed:: true
 	- Do czego służą adnotacje takie jak @Before, @Around, @After?
 	- Czy kojarzysz adnotacje takie jak @Email, @Max, @Min, @Null, @Pattern? Do czego one służą?
 - Spring Security
+  collapsed:: true
 	- Keycloak
+	  collapsed:: true
 		- Tutorial jak skonfigurować keycloak z api-gateway w mikroserwisach (od 2:00:00)
 		  {{video https://www.youtube.com/watch?v=yn_stY3HCr8&t=7216s}}
+- Spring Boot Config Server - połączenie się z prywatnym repo na githubie
+  collapsed:: true
+	- Aby połaczyć sie z prywtnym repo na gitcie trzeba wygenerować token i dać pozwolenie do odczyty z repozytorium (**Contents** -> **Access: Read-only**)
+	  https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token
+	- ```
+	  spring:
+	    application:
+	      name: "config-server"
+	    profiles:
+	      active: git
+	    cloud:
+	      config:
+	        server:
+	          git:
+	            uri: git@github.com:${USERNAME}/${REPO_NAME}.git
+	            default-label: main
+	            timeout: 5
+	            clone-on-start: true
+	            username: ${USERNAME}
+	            password: ${PASSWORD}
+	  
+	  server:
+	    port: 8888
+	  ```

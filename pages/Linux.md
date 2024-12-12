@@ -1,6 +1,5 @@
 - Narzędzia:
 	- Sprawdzanie dysku SSD (temp i inne)
-	  collapsed:: true
 		- https://www.maketecheasier.com/check-the-health-of-ssd-in-ubuntu/
 		- ```
 		  sudo apt install nvme-cli

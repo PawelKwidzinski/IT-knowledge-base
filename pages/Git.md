@@ -1,4 +1,5 @@
 - Połączenie się ze swoim repozytorium (aby nie ciągle wpisywać hasła po pushu do repo)
+  collapsed:: true
 	- https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 	  **git remote set-url origin git@github.com:username/repo.git**
 	  **git remote -v**
@@ -22,4 +23,5 @@
 	- Done!
 - ((66bc86a6-71f9-4b67-9023-7bb868b2a44b))
 - Połączenie swojej maszyny z GitHub za pomocą SSH-Keys (przydatne w przypadku kiedy chcemy robić pushe do zdalengo repo z terminala na nowym kompie)
+  collapsed:: true
 	- https://dev.to/starkydevs/how-to-set-up-ssh-keys-for-github-a-step-by-step-guide-55p0
