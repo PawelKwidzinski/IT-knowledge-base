@@ -74,6 +74,12 @@ collapsed:: true
 	  collapsed:: true
 		- Tutorial jak skonfigurować keycloak z api-gateway w mikroserwisach (od 2:00:00)
 		  {{video https://www.youtube.com/watch?v=yn_stY3HCr8&t=7216s}}
+	- Konfiguracja Keycloak -> wysyłka maila
+		- Aby wysłać maila:
+		  ![keycloak_email_sttings.png](../assets/keycloak_email_sttings_1736955008180_0.png)
+		  Trzeba wygenerować hasło na koncie google: 
+		  Bezpieczeństwo -> Weryfikacja dwuetapowa -> Hasła do aplikacji (na samym dole)
+		  Logujemy się naszym mailem i wygenerowanym hasłem
 - Spring Boot Config Server - połączenie się z prywatnym repo na githubie
   collapsed:: true
 	- Aby połaczyć sie z prywtnym repo na gitcie trzeba wygenerować token i dać pozwolenie do odczyty z repozytorium (**Contents** -> **Access: Read-only**)
