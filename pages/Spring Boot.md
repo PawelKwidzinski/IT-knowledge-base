@@ -69,8 +69,8 @@ collapsed:: true
 	- Do czego służą adnotacje takie jak @Before, @Around, @After?
 	- Czy kojarzysz adnotacje takie jak @Email, @Max, @Min, @Null, @Pattern? Do czego one służą?
 - Spring Security
+  collapsed:: true
 	- Keycloak
-	  collapsed:: true
 		- Tutorial jak skonfigurować keycloak z api-gateway w mikroserwisach (od 2:00:00)
 		  {{video https://www.youtube.com/watch?v=yn_stY3HCr8&t=7216s}}
 		- Konfiguracja Keycloak -> wysyłka maila
@@ -109,3 +109,9 @@ collapsed:: true
 	  server:
 	    port: 8888
 	  ```
+- Spring Boot JTE (Dan Vega)
+	- {{video https://www.youtube.com/watch?v=KoWgHSWA1cc&}}
+	- {{video https://www.youtube.com/watch?v=dWe-C3-YQEg}}
+	- {{video https://www.youtube.com/watch?v=kFksiDRZ824}}
+	- {{video https://www.youtube.com/watch?v=ifnv4kGtZgo}}
+	-
