@@ -1,4 +1,5 @@
 - Narzędzia:
+  collapsed:: true
 	- Sprawdzanie dysku SSD (temp i inne)
 		- https://www.maketecheasier.com/check-the-health-of-ssd-in-ubuntu/
 		- ```
@@ -14,5 +15,8 @@
 		  about. But, if you start seeing a larger number of errors, it means more
 		  of your drive is unreadable.
 - Ostrość czcionek w przeglądarkach i Intellij
-  `gsettings set org.gnome.desktop.interface text-scaling-factor 0.85`
-- https://askubuntu.com/questions/1415924/fractional-scaling-makes-browser-blurred
+  collapsed:: true
+	- `gsettings set org.gnome.desktop.interface text-scaling-factor 0.85`
+	- https://askubuntu.com/questions/1415924/fractional-scaling-makes-browser-blurred
+- Ustawienie Limitu Ładowania Baterii na Linuxie
+	- https://www.baeldung.com/linux/limit-battery-charge-level
