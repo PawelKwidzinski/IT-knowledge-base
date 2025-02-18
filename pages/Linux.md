@@ -19,4 +19,10 @@
 	- `gsettings set org.gnome.desktop.interface text-scaling-factor 0.85`
 	- https://askubuntu.com/questions/1415924/fractional-scaling-makes-browser-blurred
 - Ustawienie Limitu Ładowania Baterii na Linuxie
+  collapsed:: true
 	- https://www.baeldung.com/linux/limit-battery-charge-level
+- Ustawienie profili zasilania - POWER MODES
+  collapsed:: true
+	- ``sudo apt install power-profiles-daemon``
+- Jak zainstalować asusctl - oprogramowanie ROG CONTROL CENTER(podswietlanie klawaitury nie działa)
+	- https://forums.linuxmint.com/viewtopic.php?p=2452326
