@@ -1,5 +1,6 @@
 - [[Pytania Rekrutacyjne]]
 - [[Spring Boot]]
+- [[Java]]
 - [[Angular]]
 - [[Git]]
 - [[GitHub]]
