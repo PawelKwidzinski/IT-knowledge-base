@@ -1,7 +1,6 @@
 ## Wprowadzenie do Terraform i Infrastracture as Code (IaC)
 logseq.order-list-type:: number
 	- Terraform i język HCL (Hashicorp Configuraation Language)
-	  collapsed:: true
 		- ![maint_tf.png](../assets/maint_tf_1745576628109_0.png){:height 406, :width 686}
 		  ![image.png](../assets/image_1745576695649_0.png){:height 397, :width 687}
 		  ![image.png](../assets/image_1745576803384_0.png){:height 399, :width 687}

@@ -1,5 +1,4 @@
 - Automation Big Picture
-  collapsed:: true
 	- Wprowadzenie do Trunk Based Development
 	  collapsed:: true
 		- ![image.png](../assets/image_1723200178131_0.png){:height 316, :width 554}
@@ -26,7 +25,6 @@
 		- ![image.png](../assets/image_1723202291515_0.png){:height 315, :width 527}
 		- ![image.png](../assets/image_1723202369404_0.png){:height 359, :width 527}
 - Praca z Gitem i praca w zespole
-  collapsed:: true
 	- DevContainer
 	  collapsed:: true
 		- Jak powyższa nazwa wskazuje potrzebujemy zatem mieć zainstalowane środowisko do uruchamiania kontenerów- np. Docker Desktop oraz edytor Visual Studio Code.

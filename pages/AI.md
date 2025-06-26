@@ -1,4 +1,5 @@
 - Prompty AI
+  collapsed:: true
 	- Wdrożenie mikroserwisów na MiniPC
 	  collapsed:: true
 		- W pierwszym kroku chciałbym wdrożyć aplikację mikroserwisową na server. 
