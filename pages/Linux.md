@@ -1,3 +1,12 @@
+- KURS LINUX
+	- KOMENDY
+		- Basic Commands
+		  ![image.png](../assets/image_1754651160693_0.png){:height 423, :width 676}
+		- Commands - Directories
+		  ![image.png](../assets/image_1754651259144_0.png){:height 343, :width 673}
+		- Commands - Files
+		  ![image.png](../assets/image_1754651352887_0.png){:height 407, :width 675}
+		-
 - Narzędzia:
   collapsed:: true
 	- Sprawdzanie dysku SSD (temp i inne)
@@ -25,6 +34,7 @@
   collapsed:: true
 	- ``sudo apt install power-profiles-daemon``
 - Instalacja ROG CONTROL CENTER wraz z zarządzaniem przełączania kart graficznych
+  collapsed:: true
 	- asusctl - oprogramowanie ROG CONTROL CENTER(podswietlanie klawaitury nie działa)
 	  collapsed:: true
 		- https://forums.linuxmint.com/viewtopic.php?p=2452326

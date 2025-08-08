@@ -9,6 +9,7 @@
 		  mikroserwisową z innego kumputera który byłby w tej samej sieci domowej.
 		  Jak wykonać oba kroki?
 - Jak skonfigurować lokalnie AI (OPEN-WEBUI + ollama3)
+  collapsed:: true
 	- docker run -d -p 1000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 	- install wsl in your PowerShell:
 	  wsl --install
@@ -23,6 +24,7 @@
   collapsed:: true
 	- ![image.png](../assets/image_1721762588210_0.png)
 - Spring AI
+  collapsed:: true
 	- Ollama
 	  id:: 66c492b4-3301-4664-9db8-527c4f8a70a7
 		- https://howtodoinjava.com/spring-ai/spring-ai-ollama-example/
@@ -37,6 +39,7 @@
 			- {{video https://www.youtube.com/watch?v=xsjeIkTLf4s}}
 			  https://github.com/ThomasJay/SpringBoot-AI-1.0-Ollama-LLama
 - Instalacja Open WebUI + Ollama-nvidia
+  collapsed:: true
 	- Instalacja Open WebUI
 	  ``sudo docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui-gpu --restart always ghcr.io/open-webui/open-webui:cuda
 	  ``

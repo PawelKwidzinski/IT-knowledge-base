@@ -39,4 +39,5 @@
 			  ![kube-proxy.png](../assets/kube-proxy_1750932638779_0.png){:height 193, :width 293}
 			- container-runtime
 			  ![container-runtime.png](../assets/container-runtime_1750932864812_0.png){:height 269, :width 291}
--
+- 2. K8s - big picture
+	-
