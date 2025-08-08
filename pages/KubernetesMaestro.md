@@ -1,4 +1,5 @@
-- 1. K8s - teoria architektury
+- collapsed:: true
+  1. K8s - teoria architektury
 	- Jak działa Kubernetes?
 	  collapsed:: true
 		- ![k8s-control_plane.png](../assets/k8s-control_plane_1750927149036_0.png)
@@ -39,5 +40,94 @@
 			  ![kube-proxy.png](../assets/kube-proxy_1750932638779_0.png){:height 193, :width 293}
 			- container-runtime
 			  ![container-runtime.png](../assets/container-runtime_1750932864812_0.png){:height 269, :width 291}
+<<<<<<< HEAD
 - 2. K8s - big picture
 	-
+=======
+- 2. K8s - Big Picture
+	- Pod - najmniejsza jednostka w K8s
+	  collapsed:: true
+		- ![image.png](../assets/image_1751532797528_0.png){:height 196, :width 416}
+		  Sidecar - kontener z fragmentem kodu która agreguje logi z kontenera głównej aplikacji i np.przesyła je do zewn. systemu. Jest to mozliwe, że kontenery współdziela ten sam interfejs sieciowy.
+		  ![image.png](../assets/image_1751533259429_0.png){:height 223, :width 669}
+	- Kontener vs Pod
+	  collapsed:: true
+		- ![image.png](../assets/image_1751534866996_0.png)
+		  ![image.png](../assets/image_1751534976175_0.png)
+		- Pod w Dockerze
+		  ![image.png](../assets/image_1751535242810_0.png)
+		- *kubectl* w porównaniu do *Docker CLI*
+		  ![image.png](../assets/image_1751535649122_0.png)
+	- Format YAML
+	  collapsed:: true
+		- ```
+		  --- # seperator jeśli definiujemy więcej niż jedą strukturę
+		  
+		  # struktura typu nazwa-wartość
+		  apiVersion: v1 # wersja api
+		  
+		  # nazwa-wartość
+		  kind: Pod # rodzaj obiektu
+		  
+		  # bardziej rozbudowana struktura typu nazwa-wartość
+		  metadata:
+		    name: hello-pod # spacje, zamiast tabów - zwykle dwie spacje
+		    labels:
+		      app: web
+		      zone: prod
+		      version: v1
+		  
+		  spec:
+		    containers:
+		      # lista, czyli inaczej sekwencja obiektów
+		      # Przykład: 
+		  
+		      # args:
+		      # - sleep
+		      # - "1000"
+		      # - message
+		      # - "Friday, please!"
+		  
+		      # obiekt również może być strukturą typu nazwa-wartość
+		      - name: front-end
+		        image: dnaprawa/hello-kubernetes:1.0
+		        ports:
+		          # możemy robić zagnieżdżone listy
+		          - containerPort: 80
+		          # tutaj_mógłby_być_element_listy:
+		          #   - a_tutaj_kolejne_zagnieżdzenie
+		          #     kolejny_element:
+		          #     kolejny_element:
+		          #       - lista
+		  
+		      - name: backend # nazwa kontenera
+		        image: image.registry.com/backend # obraz
+		        ports: 
+		          - containerPort: 8080 # na jakim porcie usługa działa w kontenerze
+		  ---
+		  apiVersion: v1
+		  kind: Pod
+		  metadata:
+		    name: hello-pod-2 # spacje, zamiast tabów - zwykle dwie spacje
+		    labels:
+		      app: web-1
+		      zone: prod-1
+		      version: v1-1
+		  ```
+	- Podejście imperatywne vs deklaratywne
+	  collapsed:: true
+		- podejście imperatywne
+		  ![image.png](../assets/image_1751537943064_0.png){:height 144, :width 464}
+		- podejście deklaratywne
+		  ![image.png](../assets/image_1751538059457_0.png)
+	- ReplicatSet
+		- Zadaniem K8s nie jest dbanie, by ten sam kontener działał ciągle i nieprzerwanie, lecz by ilość i stan kontenerów się zgadzała.
+		  id:: 68665d7f-6074-4a91-a1e2-3f6847b6ca34
+		  Zadanie to wykonuje jeden z podstawowych mechanizmów w Kubernetes - ReplicaSet.
+		  ![image.png](../assets/image_1751539325056_0.png)
+		- ![image.png](../assets/image_1751539668636_0.png)
+		  ![image.png](../assets/image_1751539764223_0.png)
+	-
+-
+-
+>>>>>>> 0072603ac365e71aa5bcdd4377c62124696e5be3
