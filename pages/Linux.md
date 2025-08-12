@@ -1,24 +1,36 @@
 - KURS LINUX
 	- KOMENDY
 		- Basic Commands
-		  ![image.png](../assets/image_1754651160693_0.png){:height 423, :width 676}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754651160693_0.png){:height 423, :width 676}
 		- Commands - Directories
-		  ![image.png](../assets/image_1754651259144_0.png){:height 343, :width 673}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754651259144_0.png){:height 343, :width 673}
 		- Commands - Files
-		  ![image.png](../assets/image_1754651352887_0.png){:height 407, :width 675}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754651352887_0.png){:height 407, :width 675}
 		- User Accounts
-		  ![image.png](../assets/image_1754907332232_0.png){:height 387, :width 678}
-		  ![image.png](../assets/image_1754907408939_0.png){:height 217, :width 683}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754907332232_0.png){:height 387, :width 678}
+			- ![image.png](../assets/image_1754907408939_0.png){:height 217, :width 683}
 		- Download Files
-		  ![image.png](../assets/image_1754907504899_0.png){:height 281, :width 680}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754907504899_0.png){:height 281, :width 680}
 		- Check OS Version
-		  ![image.png](../assets/image_1754907577531_0.png){:height 437, :width 680}
+		  collapsed:: true
+			- ![image.png](../assets/image_1754907577531_0.png){:height 437, :width 680}
 		- Package Management
-		  ![image.png](../assets/image_1754908307373_0.png){:height 446, :width 678}
-		  ![image.png](../assets/image_1754908441431_0.png){:height 456, :width 680}
-		  ![image.png](../assets/image_1754908573418_0.png){:height 391, :width 680}
-		  ![image.png](../assets/image_1754908791241_0.png){:height 355, :width 683}
-		-
+		  collapsed:: true
+			- ![image.png](../assets/image_1754908307373_0.png){:height 446, :width 678}
+			- ![image.png](../assets/image_1754908441431_0.png){:height 456, :width 680}
+			- ![image.png](../assets/image_1754908573418_0.png){:height 391, :width 680}
+			- ![image.png](../assets/image_1754908791241_0.png){:height 342, :width 683}
+		- Services
+		  collapsed:: true
+			- ![image.png](../assets/image_1754983367481_0.png)
+			- ![image.png](../assets/image_1754983721311_0.png)
+			- ![image.png](../assets/image_1754983873134_0.png)
+			- ![image.png](../assets/image_1754984066788_0.png)
 - Narzędzia:
   collapsed:: true
 	- Sprawdzanie dysku SSD (temp i inne)
