@@ -26,7 +26,6 @@
 			- ![image.png](../assets/image_1754908573418_0.png){:height 391, :width 680}
 			- ![image.png](../assets/image_1754908791241_0.png){:height 342, :width 683}
 		- Services
-		  collapsed:: true
 			- ![image.png](../assets/image_1754983367481_0.png)
 			- ![image.png](../assets/image_1754983721311_0.png)
 			- ![image.png](../assets/image_1754983873134_0.png)

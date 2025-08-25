@@ -1,12 +1,11 @@
-- collapsed:: true
-  1. K8s - teoria architektury
+collapsed:: true
+1. K8s - teoria architektury
+
 	- Jak działa Kubernetes?
-	  collapsed:: true
 		- ![k8s-control_plane.png](../assets/k8s-control_plane_1750927149036_0.png)
 		  ![k8s-worker_nodes.png](../assets/k8s-worker_nodes_1750927297425_0.png) 
 		  ![k8s-jak_dziala.png](../assets/k8s-jak_dziala_1750927667424_0.png)
 	- Control plane (master nody) - szczegóły...
-	  collapsed:: true
 		- składa się z komponentów:
 		  ![master_node-szczegoly.png](../assets/master_node-szczegoly_1750930344912_0.png){:height 282, :width 307}
 			- apiServer
@@ -32,7 +31,6 @@
 		- ![k8s-wlasna_infra.png](../assets/k8s-wlasna_infra_1750929920301_0.png){:height 228, :width 478}
 		-
 	- Data plane (worker nody)
-	  collapsed:: true
 		- ![data_plane.png](../assets/data_plane_1750932147076_0.png){:height 264, :width 472}
 			- kubelet
 			  ![kubelet.png](../assets/kubelet_1750932550665_0.png){:height 167, :width 287}
@@ -40,11 +38,9 @@
 			  ![kube-proxy.png](../assets/kube-proxy_1750932638779_0.png){:height 193, :width 293}
 			- container-runtime
 			  ![container-runtime.png](../assets/container-runtime_1750932864812_0.png){:height 269, :width 291}
-<<<<<<< HEAD
-- 2. K8s - big picture
-	-
-=======
-- 2. K8s - Big Picture
+			  <<<<<<< HEAD
+- collapsed:: true
+  2. K8s - Big Picture
 	- Pod - najmniejsza jednostka w K8s
 	  collapsed:: true
 		- ![image.png](../assets/image_1751532797528_0.png){:height 196, :width 416}
@@ -128,6 +124,16 @@
 		- ![image.png](../assets/image_1751539668636_0.png)
 		  ![image.png](../assets/image_1751539764223_0.png)
 	-
+- 3. Konfiguracja i wzorce
+	- 3.1 Przekazywanie argumentów
+	  collapsed:: true
+		- ![image.png](../assets/image_1756125172754_0.png)
+		- ![image.png](../assets/image_1756125238463_0.png)
+		  ENTRYPOINT oraz CMD z dockerfile to odpowiednik "command" i "args" w pliku yaml w K8s
+		- ![image.png](../assets/image_1756125413994_0.png)
+		-
+	- 3.2 Zmienne środowiskowe
+		- ![image.png](../assets/image_1756125849255_0.png)
+		- ![image.png](../assets/image_1756125926880_0.png)
+		- ![image.png](../assets/image_1756126028046_0.png)
 -
--
->>>>>>> 0072603ac365e71aa5bcdd4377c62124696e5be3

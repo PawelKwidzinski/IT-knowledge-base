@@ -1,4 +1,5 @@
 - Automation Big Picture
+  collapsed:: true
 	- Wprowadzenie do Trunk Based Development
 	  collapsed:: true
 		- ![image.png](../assets/image_1723200178131_0.png){:height 316, :width 554}
