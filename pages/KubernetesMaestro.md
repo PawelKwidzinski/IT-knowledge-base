@@ -133,7 +133,19 @@ collapsed:: true
 		- ![image.png](../assets/image_1756125413994_0.png)
 		-
 	- 3.2 Zmienne środowiskowe
+	  collapsed:: true
 		- ![image.png](../assets/image_1756125849255_0.png)
 		- ![image.png](../assets/image_1756125926880_0.png)
 		- ![image.png](../assets/image_1756126028046_0.png)
+	- 3.3 Sposoby na przekazywanie konfiguracji do kontenerów
+	  collapsed:: true
+		- ![image.png](../assets/image_1756193031415_0.png)
+		- ![image.png](../assets/image_1756193184773_0.png)
+		- ![image.png](../assets/image_1756193460079_0.png)
+		- ![image.png](../assets/image_1756193562597_0.png)
+	- 3.4 Przekazywanie konfiguracji - Sposób 1 - ConfigMaps
+		- ![image.png](../assets/image_1756193979665_0.png)
+		- ![image.png](../assets/image_1756194093331_0.png)
+		- ![image.png](../assets/image_1756194142527_0.png)
+		-
 -
