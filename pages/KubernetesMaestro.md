@@ -124,7 +124,8 @@ collapsed:: true
 		- ![image.png](../assets/image_1751539668636_0.png)
 		  ![image.png](../assets/image_1751539764223_0.png)
 	-
-- 3. Konfiguracja i wzorce
+- collapsed:: true
+  3. Konfiguracja i wzorce
 	- 3.1 Przekazywanie argumentów
 	  collapsed:: true
 		- ![image.png](../assets/image_1756125172754_0.png)
@@ -148,4 +149,5 @@ collapsed:: true
 		- ![image.png](../assets/image_1756194093331_0.png)
 		- ![image.png](../assets/image_1756194142527_0.png)
 		-
+-
 -
