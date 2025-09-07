@@ -1,5 +1,7 @@
 - KURS LINUX
+  collapsed:: true
 	- KOMENDY
+	  collapsed:: true
 		- Basic Commands
 		  collapsed:: true
 			- ![image.png](../assets/image_1754651160693_0.png){:height 423, :width 676}
@@ -26,6 +28,7 @@
 			- ![image.png](../assets/image_1754908573418_0.png){:height 391, :width 680}
 			- ![image.png](../assets/image_1754908791241_0.png){:height 342, :width 683}
 		- Services
+		  collapsed:: true
 			- ![image.png](../assets/image_1754983367481_0.png)
 			- ![image.png](../assets/image_1754983721311_0.png)
 			- ![image.png](../assets/image_1754983873134_0.png)
@@ -63,3 +66,80 @@
 		- https://forums.linuxmint.com/viewtopic.php?p=2452326
 	- supergfxctl - oprogramowanie do przełączania kart graficznych
 		- https://gitlab.com/asus-linux/supergfxctl
+- BazziteOS
+	- Konfiguracja Distrobox:
+		- Instalacja VS Codium w Distrobox (Fedora) z optymalizacją dla ekranu 4K:
+			- ## Krok 1: Przygotowanie środowiska hosta
+			  
+			  Poniższe polecenia wykonaj w terminalu na swoim głównym systemie (np. Bazzite OS).
+			  **Usuń stary kontener (opcjonalnie, ale zalecane):**
+			  
+			  Zazpewni to start od zera i uniknięcie konfliktów ze starymi konfiguracjami.
+			- ```
+			  distrobox rm -f fedora
+			  ```
+			- **Stwórz nowy, "czysty" kontener:**
+			  
+			  Tworzymy kontener bez żadnych dodatkowych montowań katalogów 
+			  systemowych, aby uniknąć problemów z brakiem miejsca podczas instalacji.
+			- ```
+			  distrobox create --name fedora --image fedora:latest
+			  ```
+			- ## Krok 2: Instalacja VS Codium w kontenerze
+			  
+			  Teraz przechodzimy do pracy wewnątrz nowo stworzonego kontenera.
+			- **Wejdź do kontenera:**
+			- ```
+			  distrobox-enter fedora
+			  
+			  ```
+			  
+			  **Ważne:** Wszystkie następne polecenia aż do ostatniego kroku wykonujesz **wewnątrz kontenera**.
+			- **Zainstaluj VS Codium:**
+			  
+			  Dodajemy oficjalne repozytorium i instalujemy pakiet.
+			- ```
+			  sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+			  printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
+			  sudo dnf install -y codium
+			  
+			  ```
+			- ## Krok 3: Synchronizacja konfiguracji czcionek
+			  
+			  Po
+			  udanej instalacji nadpisujemy konfigurację czcionek w kontenerze tą z 
+			  Twojego systemu-hosta, aby zapewnić identyczne renderowanie.
+			  
+			  ```
+			  sudo mkdir -p /etc/fonts
+			  
+			  sudo cp -rf /run/host/etc/fonts/* /etc/fonts/
+			  ```
+			- ## Krok 4: Konfiguracja dla ekranu 4K (HiDPI)
+			  
+			  Tworzymy prosty skrót (`alias`),
+			  który będzie uruchamiał VS Codium z flagami wymuszającymi natywny tryb 
+			  Wayland i poprawne skalowanie – jest to klucz do idealnej ostrości.
+			- **Dodaj alias do pliku `.bashrc`:**
+			  
+			  Skopiuj i wklej poniższą komendę. Automatycznie dopisze ona na końcu pliku konfiguracyjnego definicję skrótu `codium-sharp`.
+			- ```
+			  echo 'alias codium-sharp="codium --enable-features=UseOzonePlatform --ozone-platform=wayland --force-device-scale-factor=1 --disable-font-subpixel-positioning"' >> ~/.bashrc
+			  
+			  ```
+			- **Aktywuj nowy skrót w bieżącej sesji:**
+			  
+			  "Odśwież" konfigurację terminala, aby nowy alias był od razu dostępny.
+			- ```
+			  source ~/.bashrc
+			  
+			  ```
+			- ## Krok 5: Uruchomienie i weryfikacja
+			  
+			  Wszystko jest gotowe. Aby uruchomić VS Codium z poprawnymi ustawieniami, użyj nowo stworzonego skrótu.
+			  
+			  ```
+			  codium-sharp
+			  ```
+			  
+			  Od teraz, za każdym razem, gdy będziesz chciał uruchomić VS Codium w tym kontenerze, po prostu wejdź do niego (`distrobox-enter fedora`) i wpisz `codium-sharp`. Aplikacja uruchomi się z idealnie ostrym interfejsem i tekstem.
